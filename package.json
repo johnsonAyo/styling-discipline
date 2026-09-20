@@ -1,0 +1,26 @@
+{
+  "name": "styling-discipline",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm --filter @sd/web dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "guard:css": "node scripts/no-stray-css.mjs",
+    "guard:values": "node scripts/no-arbitrary-values.mjs",
+    "guard:vocab": "node scripts/no-vocab-drift.mjs",
+    "guard": "pnpm guard:css && pnpm guard:values && pnpm guard:vocab",
+    "verify": "pnpm guard && pnpm typecheck && pnpm build",
+    "discipline": "node scripts/discipline-heuristics.mjs",
+    "prepare": "lefthook install || true",
+    "hooks": "lefthook install",
+    "discipline:ai": "node scripts/discipline-ai-review.mjs",
+    "discipline:all": "pnpm discipline && pnpm discipline:ai"
+  },
+  "devDependencies": {
+    "lefthook": "^1.11.0",
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,10 @@
+# Mechanical + AI (Gemini, same as Ralph). FAIL blocks push — no human step.
+
+pre-push:
+  commands:
+    verify:
+      run: pnpm verify
+    discipline-heuristics:
+      run: pnpm discipline
+    discipline-ai:
+      run: pnpm discipline:ai

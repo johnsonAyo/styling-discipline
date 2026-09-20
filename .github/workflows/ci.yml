@@ -1,0 +1,55 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify
+
+  discipline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Require GEMINI_API_KEY (Ralph secret name)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          if [ -z "$GEMINI_API_KEY" ]; then
+            echo "::error::Add repo secret GEMINI_API_KEY (same as Ralph). AI discipline gate needs it."
+            exit 1
+          fi
+      - name: Heuristics
+        run: pnpm discipline
+        env:
+          DISCIPLINE_BASE: origin/${{ github.base_ref || 'main' }}
+      - name: AI review via Gemini (replace-don't-layer)
+        run: pnpm discipline:ai
+        env:
+          DISCIPLINE_BASE: origin/${{ github.base_ref || 'main' }}
+          GITHUB_BASE_REF: ${{ github.base_ref }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}

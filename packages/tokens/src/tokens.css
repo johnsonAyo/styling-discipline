@@ -1,0 +1,141 @@
+/**
+ * Visual language: Vercel Geist materials + Linear density.
+ * Agents never touch these values — only props.
+ */
+:root {
+  /* Gray ramp (Geist-like) */
+  --sd-gray-100: #fafafa;
+  --sd-gray-200: #f5f5f5;
+  --sd-gray-300: #eee;
+  --sd-gray-400: #e5e5e5;
+  --sd-gray-500: #d4d4d4;
+  --sd-gray-600: #a3a3a3;
+  --sd-gray-700: #737373;
+  --sd-gray-800: #525252;
+  --sd-gray-900: #404040;
+  --sd-gray-1000: #171717;
+
+  --sd-bg: #ffffff;
+  --sd-bg-elevated: #ffffff;
+  --sd-fg: var(--sd-gray-1000);
+  --sd-muted: var(--sd-gray-700);
+  --sd-border: var(--sd-gray-400);
+  --sd-border-hover: var(--sd-gray-500);
+  --sd-surface: var(--sd-gray-100);
+  --sd-surface-hover: var(--sd-gray-200);
+  --sd-surface-active: var(--sd-gray-300);
+
+  /* Brand = near-black primary (Vercel) + indigo accent for soft/info */
+  --sd-brand: #171717;
+  --sd-brand-fg: #ffffff;
+  --sd-brand-soft: #f5f5f5;
+  --sd-brand-hover: #000000;
+  --sd-accent: #5e6ad2; /* Linear-ish lavender for focus / info accents */
+  --sd-accent-soft: #eef0ff;
+
+  --sd-success: #0f7b3a;
+  --sd-success-fg: #ffffff;
+  --sd-success-soft: #e8f8ef;
+  --sd-warning: #a15c00;
+  --sd-warning-fg: #ffffff;
+  --sd-warning-soft: #fff6e5;
+  --sd-danger: #e5484d;
+  --sd-danger-fg: #ffffff;
+  --sd-danger-soft: #ffecec;
+  --sd-info: #0070f3;
+  --sd-info-fg: #ffffff;
+  --sd-info-soft: #e8f3ff;
+
+  /* Materials — Geist radii */
+  --sd-radius-none: 0;
+  --sd-radius-sm: 6px;
+  --sd-radius-md: 8px;
+  --sd-radius-lg: 12px;
+  --sd-radius-xl: 16px;
+  --sd-radius-full: 9999px;
+
+  /* Elevation */
+  --sd-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --sd-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --sd-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.06);
+  --sd-shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.04), 0 16px 32px rgba(0, 0, 0, 0.08);
+  --sd-shadow-ring: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 0 0 4px rgba(0, 0, 0, 0.04);
+  --sd-shadow-focus: 0 0 0 2px var(--sd-bg), 0 0 0 4px var(--sd-accent);
+
+  /* Space */
+  --sd-space-0: 0;
+  --sd-space-1: 0.25rem;
+  --sd-space-2: 0.5rem;
+  --sd-space-3: 0.75rem;
+  --sd-space-4: 1rem;
+  --sd-space-5: 1.25rem;
+  --sd-space-6: 1.5rem;
+  --sd-space-7: 1.75rem;
+  --sd-space-8: 2rem;
+  --sd-space-9: 3rem;
+
+  /* Controls — slightly tighter than before */
+  --sd-size-1: 1.75rem;
+  --sd-size-2: 2rem;
+  --sd-size-3: 2.5rem;
+  --sd-size-4: 3rem;
+
+  --sd-font: "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --sd-font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --sd-font-1: 0.75rem;
+  --sd-font-2: 0.8125rem;
+  --sd-font-3: 0.9375rem;
+  --sd-font-4: 1.0625rem;
+  --sd-tracking: -0.011em;
+  --sd-tracking-tight: -0.02em;
+}
+
+.dark {
+  --sd-gray-100: #0a0a0a;
+  --sd-gray-200: #111;
+  --sd-gray-300: #1a1a1a;
+  --sd-gray-400: #262626;
+  --sd-gray-500: #333;
+  --sd-gray-600: #525252;
+  --sd-gray-700: #a3a3a3;
+  --sd-gray-800: #d4d4d4;
+  --sd-gray-900: #e5e5e5;
+  --sd-gray-1000: #ededed;
+
+  --sd-bg: #000000;
+  --sd-bg-elevated: #0a0a0a;
+  --sd-fg: var(--sd-gray-1000);
+  --sd-muted: var(--sd-gray-700);
+  --sd-border: var(--sd-gray-400);
+  --sd-border-hover: var(--sd-gray-500);
+  --sd-surface: var(--sd-gray-200);
+  --sd-surface-hover: var(--sd-gray-300);
+  --sd-surface-active: var(--sd-gray-400);
+
+  --sd-brand: #ededed;
+  --sd-brand-fg: #0a0a0a;
+  --sd-brand-soft: #1a1a1a;
+  --sd-brand-hover: #ffffff;
+  --sd-accent: #8b93ff;
+  --sd-accent-soft: #1a1c33;
+
+  --sd-success: #3dd68c;
+  --sd-success-fg: #052e16;
+  --sd-success-soft: #0c2a1a;
+  --sd-warning: #f5a524;
+  --sd-warning-fg: #2a1700;
+  --sd-warning-soft: #2a1c00;
+  --sd-danger: #ff6369;
+  --sd-danger-fg: #2a0608;
+  --sd-danger-soft: #2a0a0c;
+  --sd-info: #52a8ff;
+  --sd-info-fg: #001529;
+  --sd-info-soft: #001833;
+
+  --sd-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sd-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --sd-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+  --sd-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.65);
+  --sd-shadow-ring: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --sd-shadow-focus: 0 0 0 2px var(--sd-bg), 0 0 0 4px var(--sd-accent);
+}
