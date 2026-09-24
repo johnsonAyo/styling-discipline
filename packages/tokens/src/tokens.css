@@ -1,53 +1,52 @@
 /**
- * DriveTrack visual tokens: modern, precision-crafted dual light/dark design system.
- * Agents never touch raw values in apps — only tokens and props.
+ * DriveTrack visual language: midnight aubergine, electric lilac and signal coral.
+ * Agents never touch these values — only props.
  */
 :root {
-  /* Light mode (Default) */
-  --sd-gray-50: #f8fafc;
-  --sd-gray-100: #f1f5f9;
-  --sd-gray-200: #e2e8f0;
-  --sd-gray-300: #cbd5e1;
-  --sd-gray-400: #94a3b8;
-  --sd-gray-500: #64748b;
-  --sd-gray-600: #475569;
-  --sd-gray-700: #334155;
-  --sd-gray-800: #1e293b;
-  --sd-gray-900: #0f172a;
-  --sd-gray-1000: #020617;
+  /* Midnight ramp: deliberately lifted above pure black. */
+  --sd-gray-100: #191722;
+  --sd-gray-200: #1d1a28;
+  --sd-gray-300: #242131;
+  --sd-gray-400: #373247;
+  --sd-gray-500: #4a445d;
+  --sd-gray-600: #716a80;
+  --sd-gray-700: #aaa4b8;
+  --sd-gray-800: #d3cfdd;
+  --sd-gray-900: #ece9f2;
+  --sd-gray-1000: #fbf9fe;
 
-  --sd-bg: #ffffff;
-  --sd-bg-elevated: #f8fafc;
-  --sd-fg: var(--sd-gray-900);
-  --sd-muted: var(--sd-gray-500);
-  --sd-border: var(--sd-gray-200);
-  --sd-border-hover: var(--sd-gray-300);
-  --sd-surface: var(--sd-gray-50);
-  --sd-surface-hover: var(--sd-gray-100);
-  --sd-surface-active: var(--sd-gray-200);
+  --sd-bg: #17141f;
+  --sd-bg-elevated: #1f1b2a;
+  --sd-fg: var(--sd-gray-1000);
+  --sd-muted: var(--sd-gray-700);
+  --sd-border: var(--sd-gray-400);
+  --sd-border-hover: var(--sd-gray-500);
+  --sd-surface: var(--sd-gray-100);
+  --sd-surface-hover: var(--sd-gray-200);
+  --sd-surface-active: var(--sd-gray-300);
 
-  /* Brand: Electric Indigo & Precision UK Road Blue */
-  --sd-brand: #4f46e5;
+  /* Signal coral carries action; lilac carries focus and product state. */
+  --sd-brand: #ec5b88;
   --sd-brand-fg: #ffffff;
-  --sd-brand-soft: #eef2ff;
-  --sd-brand-hover: #4338ca;
-  --sd-accent: #6366f1;
-  --sd-accent-soft: #f5f3ff;
+  --sd-brand-soft: #3b2033;
+  --sd-brand-hover: #f86e99;
+  --sd-accent: #9b8cff;
+  --sd-accent-soft: #2a2448;
 
-  --sd-success: #10b981;
-  --sd-success-fg: #ffffff;
-  --sd-success-soft: #ecfdf5;
-  --sd-warning: #f59e0b;
-  --sd-warning-fg: #ffffff;
-  --sd-warning-soft: #fffbeb;
-  --sd-danger: #ef4444;
+  --sd-success: #62d6a1;
+  --sd-success-fg: #10271e;
+  --sd-success-soft: #173329;
+  --sd-warning: #f3b662;
+  --sd-warning-fg: #2d1c08;
+  --sd-warning-soft: #3a2a18;
+  --sd-danger: #ff6f79;
   --sd-danger-fg: #ffffff;
-  --sd-danger-soft: #fef2f2;
-  --sd-info: #6366f1;
+  --sd-danger-soft: #3c2029;
+  --sd-info: #9b8cff;
   --sd-info-fg: #ffffff;
-  --sd-info-soft: #eef2ff;
+  --sd-info-soft: #2a2448;
 
-  /* Materials — Radii */
+  /* Materials — Geist radii */
   --sd-radius-none: 0;
   --sd-radius-sm: 6px;
   --sd-radius-md: 8px;
@@ -56,12 +55,16 @@
   --sd-radius-full: 9999px;
 
   /* Elevation */
-  --sd-shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --sd-shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
-  --sd-shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.08), 0 2px 6px -2px rgba(0, 0, 0, 0.04);
-  --sd-shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.1), 0 4px 10px -4px rgba(0, 0, 0, 0.05);
-  --sd-shadow-ring: 0 0 0 1px rgba(15, 23, 42, 0.08), 0 0 0 4px rgba(99, 102, 241, 0.12);
-  --sd-shadow-focus: 0 0 0 2px var(--sd-bg), 0 0 0 4px var(--sd-brand);
+  --sd-shadow-xs: 0 1px 2px rgba(4, 3, 10, 0.28);
+  --sd-shadow-sm:
+    0 1px 2px rgba(4, 3, 10, 0.35), 0 4px 12px rgba(4, 3, 10, 0.2);
+  --sd-shadow-md:
+    0 4px 12px rgba(4, 3, 10, 0.3), 0 16px 32px rgba(4, 3, 10, 0.22);
+  --sd-shadow-lg:
+    0 8px 24px rgba(4, 3, 10, 0.32), 0 28px 72px rgba(4, 3, 10, 0.36);
+  --sd-shadow-ring:
+    0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 0 4px rgba(155, 140, 255, 0.12);
+  --sd-shadow-focus: 0 0 0 2px var(--sd-bg), 0 0 0 4px var(--sd-accent);
 
   /* Space */
   --sd-space-0: 0;
@@ -75,14 +78,18 @@
   --sd-space-8: 2rem;
   --sd-space-9: 3rem;
 
-  /* Controls */
+  /* Controls — slightly tighter than before */
   --sd-size-1: 1.75rem;
   --sd-size-2: 2rem;
   --sd-size-3: 2.5rem;
   --sd-size-4: 3rem;
 
-  --sd-font: "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-  --sd-font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --sd-font:
+    "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Helvetica, Arial, sans-serif;
+  --sd-font-mono:
+    "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    monospace;
   --sd-font-1: 0.75rem;
   --sd-font-2: 0.8125rem;
   --sd-font-3: 0.9375rem;
@@ -93,41 +100,4 @@
 
 .dark {
   color-scheme: dark;
-
-  --sd-bg: #090d16;
-  --sd-bg-elevated: #0f1422;
-  --sd-fg: #f8fafc;
-  --sd-muted: #94a3b8;
-  --sd-border: rgba(255, 255, 255, 0.09);
-  --sd-border-hover: rgba(255, 255, 255, 0.16);
-  --sd-surface: #121829;
-  --sd-surface-hover: #182035;
-  --sd-surface-active: #202b46;
-
-  --sd-brand: #6366f1;
-  --sd-brand-fg: #ffffff;
-  --sd-brand-soft: rgba(99, 102, 241, 0.15);
-  --sd-brand-hover: #818cf8;
-  --sd-accent: #818cf8;
-  --sd-accent-soft: rgba(129, 140, 248, 0.15);
-
-  --sd-success: #34d399;
-  --sd-success-fg: #022c22;
-  --sd-success-soft: rgba(52, 211, 153, 0.15);
-  --sd-warning: #fbbf24;
-  --sd-warning-fg: #451a03;
-  --sd-warning-soft: rgba(251, 191, 36, 0.15);
-  --sd-danger: #f87171;
-  --sd-danger-fg: #450a0a;
-  --sd-danger-soft: rgba(248, 113, 113, 0.15);
-  --sd-info: #818cf8;
-  --sd-info-fg: #ffffff;
-  --sd-info-soft: rgba(129, 140, 248, 0.15);
-
-  --sd-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --sd-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.3);
-  --sd-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5), 0 8px 24px rgba(0, 0, 0, 0.35);
-  --sd-shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6), 0 24px 64px rgba(0, 0, 0, 0.5);
-  --sd-shadow-ring: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 0 0 4px rgba(99, 102, 241, 0.2);
-  --sd-shadow-focus: 0 0 0 2px var(--sd-bg), 0 0 0 4px var(--sd-brand);
 }
