@@ -1,24 +1,19 @@
-# DriveTrack
+# styling-discipline
 
-DriveTrack is a scheduling and lesson follow-through workspace for independent UK driving instructors. The repository retains its original **variant-first UI** discipline: agents and humans style through component props, not new application CSS.
+Monorepo for **variant-first UI**: agents and humans style via component props, not new CSS files.
 
 ## Rules
-
 - No per-component / page CSS modules.
 - Allowed stylesheets: `packages/tokens/src/tokens.css`, `apps/web/src/app/globals.css` only.
 - Call sites may use Tailwind utilities via `className` for one-offs.
 - Prefer locked variants (`tone`, `variant`, `size`, `radius`, …) over inventing values.
 
 ## Apps
-
-- `apps/web` — the Next.js marketing and product application. The first implemented slice includes `/`, `/features`, `/privacy`, and `/terms`.
+- `apps/web` — kitchen sink at `/` showing every primitive × variant.
 
 ## Packages
-
 - `@sd/tokens` — CSS variables + Tailwind theme bridge
 - `@sd/ui` — variant-rich primitives (`cva`)
-
-The confirmed product and engineering contract lives in [`SPEC.md`](./SPEC.md).
 
 ```bash
 pnpm install

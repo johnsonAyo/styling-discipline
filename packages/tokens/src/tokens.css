@@ -1,22 +1,22 @@
 /**
- * DriveTrack visual language: midnight aubergine, electric lilac and signal coral.
+ * Visual language: Vercel Geist materials + Linear density.
  * Agents never touch these values — only props.
  */
 :root {
-  /* Midnight ramp: deliberately lifted above pure black. */
-  --sd-gray-100: #191722;
-  --sd-gray-200: #1d1a28;
-  --sd-gray-300: #242131;
-  --sd-gray-400: #373247;
-  --sd-gray-500: #4a445d;
-  --sd-gray-600: #716a80;
-  --sd-gray-700: #aaa4b8;
-  --sd-gray-800: #d3cfdd;
-  --sd-gray-900: #ece9f2;
-  --sd-gray-1000: #fbf9fe;
+  /* Gray ramp (Geist-like) */
+  --sd-gray-100: #fafafa;
+  --sd-gray-200: #f5f5f5;
+  --sd-gray-300: #eee;
+  --sd-gray-400: #e5e5e5;
+  --sd-gray-500: #d4d4d4;
+  --sd-gray-600: #a3a3a3;
+  --sd-gray-700: #737373;
+  --sd-gray-800: #525252;
+  --sd-gray-900: #404040;
+  --sd-gray-1000: #171717;
 
-  --sd-bg: #17141f;
-  --sd-bg-elevated: #1f1b2a;
+  --sd-bg: #ffffff;
+  --sd-bg-elevated: #ffffff;
   --sd-fg: var(--sd-gray-1000);
   --sd-muted: var(--sd-gray-700);
   --sd-border: var(--sd-gray-400);
@@ -25,26 +25,26 @@
   --sd-surface-hover: var(--sd-gray-200);
   --sd-surface-active: var(--sd-gray-300);
 
-  /* Signal coral carries action; lilac carries focus and product state. */
-  --sd-brand: #ec5b88;
+  /* Brand = near-black primary (Vercel) + indigo accent for soft/info */
+  --sd-brand: #171717;
   --sd-brand-fg: #ffffff;
-  --sd-brand-soft: #3b2033;
-  --sd-brand-hover: #f86e99;
-  --sd-accent: #9b8cff;
-  --sd-accent-soft: #2a2448;
+  --sd-brand-soft: #f5f5f5;
+  --sd-brand-hover: #000000;
+  --sd-accent: #5e6ad2; /* Linear-ish lavender for focus / info accents */
+  --sd-accent-soft: #eef0ff;
 
-  --sd-success: #62d6a1;
-  --sd-success-fg: #10271e;
-  --sd-success-soft: #173329;
-  --sd-warning: #f3b662;
-  --sd-warning-fg: #2d1c08;
-  --sd-warning-soft: #3a2a18;
-  --sd-danger: #ff6f79;
+  --sd-success: #0f7b3a;
+  --sd-success-fg: #ffffff;
+  --sd-success-soft: #e8f8ef;
+  --sd-warning: #a15c00;
+  --sd-warning-fg: #ffffff;
+  --sd-warning-soft: #fff6e5;
+  --sd-danger: #e5484d;
   --sd-danger-fg: #ffffff;
-  --sd-danger-soft: #3c2029;
-  --sd-info: #9b8cff;
+  --sd-danger-soft: #ffecec;
+  --sd-info: #0070f3;
   --sd-info-fg: #ffffff;
-  --sd-info-soft: #2a2448;
+  --sd-info-soft: #e8f3ff;
 
   /* Materials — Geist radii */
   --sd-radius-none: 0;
@@ -55,15 +55,11 @@
   --sd-radius-full: 9999px;
 
   /* Elevation */
-  --sd-shadow-xs: 0 1px 2px rgba(4, 3, 10, 0.28);
-  --sd-shadow-sm:
-    0 1px 2px rgba(4, 3, 10, 0.35), 0 4px 12px rgba(4, 3, 10, 0.2);
-  --sd-shadow-md:
-    0 4px 12px rgba(4, 3, 10, 0.3), 0 16px 32px rgba(4, 3, 10, 0.22);
-  --sd-shadow-lg:
-    0 8px 24px rgba(4, 3, 10, 0.32), 0 28px 72px rgba(4, 3, 10, 0.36);
-  --sd-shadow-ring:
-    0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 0 4px rgba(155, 140, 255, 0.12);
+  --sd-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --sd-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --sd-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.06);
+  --sd-shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.04), 0 16px 32px rgba(0, 0, 0, 0.08);
+  --sd-shadow-ring: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 0 0 4px rgba(0, 0, 0, 0.04);
   --sd-shadow-focus: 0 0 0 2px var(--sd-bg), 0 0 0 4px var(--sd-accent);
 
   /* Space */
@@ -84,12 +80,8 @@
   --sd-size-3: 2.5rem;
   --sd-size-4: 3rem;
 
-  --sd-font:
-    "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
-    Helvetica, Arial, sans-serif;
-  --sd-font-mono:
-    "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    monospace;
+  --sd-font: "Geist", "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --sd-font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --sd-font-1: 0.75rem;
   --sd-font-2: 0.8125rem;
   --sd-font-3: 0.9375rem;
@@ -99,5 +91,51 @@
 }
 
 .dark {
-  color-scheme: dark;
+  --sd-gray-100: #0a0a0a;
+  --sd-gray-200: #111;
+  --sd-gray-300: #1a1a1a;
+  --sd-gray-400: #262626;
+  --sd-gray-500: #333;
+  --sd-gray-600: #525252;
+  --sd-gray-700: #a3a3a3;
+  --sd-gray-800: #d4d4d4;
+  --sd-gray-900: #e5e5e5;
+  --sd-gray-1000: #ededed;
+
+  --sd-bg: #000000;
+  --sd-bg-elevated: #0a0a0a;
+  --sd-fg: var(--sd-gray-1000);
+  --sd-muted: var(--sd-gray-700);
+  --sd-border: var(--sd-gray-400);
+  --sd-border-hover: var(--sd-gray-500);
+  --sd-surface: var(--sd-gray-200);
+  --sd-surface-hover: var(--sd-gray-300);
+  --sd-surface-active: var(--sd-gray-400);
+
+  --sd-brand: #ededed;
+  --sd-brand-fg: #0a0a0a;
+  --sd-brand-soft: #1a1a1a;
+  --sd-brand-hover: #ffffff;
+  --sd-accent: #8b93ff;
+  --sd-accent-soft: #1a1c33;
+
+  --sd-success: #3dd68c;
+  --sd-success-fg: #052e16;
+  --sd-success-soft: #0c2a1a;
+  --sd-warning: #f5a524;
+  --sd-warning-fg: #2a1700;
+  --sd-warning-soft: #2a1c00;
+  --sd-danger: #ff6369;
+  --sd-danger-fg: #2a0608;
+  --sd-danger-soft: #2a0a0c;
+  --sd-info: #52a8ff;
+  --sd-info-fg: #001529;
+  --sd-info-soft: #001833;
+
+  --sd-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sd-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+  --sd-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.55);
+  --sd-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.65);
+  --sd-shadow-ring: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  --sd-shadow-focus: 0 0 0 2px var(--sd-bg), 0 0 0 4px var(--sd-accent);
 }
