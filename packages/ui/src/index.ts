@@ -14,7 +14,7 @@ export { Stack, type StackProps } from "./stack";
 export { Text, textVariants, type TextProps } from "./text";
 export { Heading, headingVariants, type HeadingProps } from "./heading";
 export { Container, containerVariants, type ContainerProps } from "./container";
-export { ThemeProvider, useTheme } from "./theme-provider";
+export { ThemeProvider, useTheme, ThemeToggle } from "./theme-provider";
 export { Button, buttonVariants, type ButtonProps } from "./button";
 export { Badge, badgeVariants, type BadgeProps } from "./badge";
 export { Input, inputVariants, type InputProps } from "./input";
@@ -36,8 +36,11 @@ export { Switch, type SwitchProps } from "./switch";
 export { Avatar, avatarVariants, type AvatarProps } from "./avatar";
 export { Select, selectVariants, type SelectProps } from "./select";
 export {
+  BandedDivider,
   Brand,
   FeatureGrid,
+  InstructorCockpitPreview,
+  InstructorFaq,
   MarketingCallout,
   MarketingFooter,
   MarketingHeader,
@@ -47,5 +50,6 @@ export {
   PolicyPage,
   PolicySection,
   ProofStrip,
+  SocialProof,
   Workflow,
 } from "./marketing";

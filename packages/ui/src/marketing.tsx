@@ -54,6 +54,8 @@ export function Brand({ compact = false }: { compact?: boolean }) {
   );
 }
 
+import { ThemeToggle } from "./theme-provider";
+
 export function MarketingShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen overflow-hidden bg-bg text-fg">{children}</div>
@@ -62,9 +64,9 @@ export function MarketingShell({ children }: { children: React.ReactNode }) {
 
 export function MarketingHeader() {
   return (
-    <header className="relative z-50 pt-5 sm:pt-7">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full pt-4 sm:pt-6">
       <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between gap-4 rounded-full border border-border bg-bg-elevated/90 px-4 shadow-sdmd backdrop-blur-xl sm:px-5">
+        <div className="flex h-16 items-center justify-between gap-4 rounded-full border border-border/80 bg-bg-elevated/85 px-4 shadow-sdmd backdrop-blur-xl sm:px-6">
           <Brand />
           <nav
             aria-label="Primary navigation"
@@ -86,6 +88,16 @@ export function MarketingHeader() {
                 tone: "neutral",
                 size: "2",
               })}
+              href="/#cockpit"
+            >
+              Cockpit
+            </a>
+            <a
+              className={buttonVariants({
+                variant: "ghost",
+                tone: "neutral",
+                size: "2",
+              })}
               href="/#workflow"
             >
               How it works
@@ -96,22 +108,25 @@ export function MarketingHeader() {
                 tone: "neutral",
                 size: "2",
               })}
-              href="/privacy"
+              href="/#faq"
             >
-              Privacy
+              FAQ
             </a>
           </nav>
-          <a
-            className={buttonVariants({
-              variant: "solid",
-              tone: "brand",
-              size: "4",
-              radius: "full",
-            })}
-            href={PILOT_LINK}
-          >
-            Join the pilot <ArrowIcon />
-          </a>
+          <div className="flex items-center gap-2.5">
+            <ThemeToggle />
+            <a
+              className={buttonVariants({
+                variant: "solid",
+                tone: "brand",
+                size: "2",
+                radius: "full",
+              })}
+              href={PILOT_LINK}
+            >
+              Get Started <ArrowIcon />
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -249,9 +264,13 @@ export function PolicySection({
 }
 
 export {
+  BandedDivider,
   FeatureGrid,
+  InstructorCockpitPreview,
+  InstructorFaq,
   MarketingCallout,
   MarketingHero,
   ProofStrip,
+  SocialProof,
   Workflow,
 } from "./marketing-home";

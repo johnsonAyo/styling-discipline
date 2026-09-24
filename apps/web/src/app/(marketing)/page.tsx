@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
 import {
+  BandedDivider,
   FeatureGrid,
+  InstructorFaq,
   MarketingCallout,
   MarketingHero,
   ProofStrip,
+  SocialProof,
   Workflow,
 } from "@sd/ui";
 
 export const metadata: Metadata = {
-  title: "DriveTrack — Every lesson. One clear road forward.",
+  title: "DriveTrack — The Cockpit for Independent UK Driving Instructors",
   description:
-    "Plan availability, release lesson slots, manage bookings, and send useful lesson recaps with DriveTrack—built for independent UK driving instructors.",
+    "Plan availability, protect travel buffers, release pupil-scoped booking links, and record 60-second DVSA debriefs with DriveTrack.",
   alternates: { canonical: "/" },
 };
 
@@ -18,69 +21,79 @@ const proof = [
   {
     label: "Default lesson",
     value: "2 hours",
-    detail: "Customisable when the day needs something different.",
+    detail: "Intelligent travel buffers calculated between student postcodes.",
   },
   {
-    label: "Learner access",
-    value: "One secure link",
-    detail: "No account, profile, password, or payment screen.",
+    label: "Pupil access",
+    value: "Zero logins",
+    detail: "Encrypted single-use links—no app download, profile, or password.",
   },
   {
-    label: "Lesson follow-through",
-    value: "Under 60 seconds",
-    detail: "Capture the outcome while the lesson is still fresh.",
+    label: "Lesson debrief",
+    value: "Under 60s",
+    detail: "Capture competencies and driving faults before turning the ignition off.",
   },
 ] as const;
 
 const features = [
   {
     index: "01",
-    title: "A calendar that understands teaching days",
+    title: "Travel buffer intelligence that protects your teaching day",
     description:
-      "Create and duplicate availability, see the shape of the week, and get a calm warning when travel time looks tight.",
+      "Instructors don't teleport. DriveTrack computes realistic travel times between pupil postcodes and flags tight turnarounds before you commit.",
     detail:
-      "Real overlaps are blocked. Travel buffers stay advisory, because you know the route.",
+      "Travel warnings stay advisory—because you know local roadworks and shortcuts better than an algorithm.",
   },
   {
     index: "02",
-    title: "Release only the slots you mean to offer",
+    title: "Release targeted slots without baby-sitting a public calendar",
     description:
-      "Select a useful set of openings, choose the students, preview the message, and publish secure booking links.",
+      "Select a batch of openings, dispatch them to waiting pupils, and watch them claim their slot in one tap.",
     detail:
-      "Every release is deliberate—there is no permanent public booking page to babysit.",
+      "Pupils only see the openings meant for them—your private diary is never exposed to random public bookings.",
   },
   {
     index: "03",
-    title: "Give students a smaller, better interface",
+    title: "The 48-hour self-service cancellation boundary",
     description:
-      "A student opens their link, sees the slots meant for them, and confirms without typing their details again.",
+      "Pupils can self-serve reschedule outside 48 hours. Inside 48 hours, self-service changes lock automatically to protect your teaching income.",
     detail:
-      "Cancellation and rescheduling remain self-service until the 48-hour boundary.",
+      "No awkward WhatsApp negotiations. The boundary is clear, professional, and consistent.",
+  },
+  {
+    index: "04",
+    title: "DVSA syllabus progress tracking & pupil debriefs",
+    description:
+      "Track progress across the 27 DVSA driving competencies from Introduced (Level 1) to Independent (Level 5).",
+    detail:
+      "Pupils and parents get instant, transparent recaps via WhatsApp or email, building test readiness faster.",
   },
 ] as const;
 
 const workflow = [
   {
     number: "01",
-    title: "Plan",
-    description: "Shape the week around the hours you actually want to teach.",
+    title: "Shape the week",
+    description:
+      "Build your teaching availability around your preferred zones, test centres, and break times.",
   },
   {
     number: "02",
-    title: "Release",
+    title: "Dispatch openings",
     description:
-      "Choose openings and send each student their own secure route in.",
+      "Send private booking links to selected pupils with automatic 48h boundary enforcement.",
   },
   {
     number: "03",
-    title: "Teach",
-    description: "Use Today as the calm command surface between lessons.",
+    title: "Teach with clarity",
+    description:
+      "Today's cockpit keeps pupil notes, route goals, and contact shortcuts one tap away in the car.",
   },
   {
     number: "04",
-    title: "Close the loop",
+    title: "Lock in the recap",
     description:
-      "Capture outcomes and send the approved recap while context is fresh.",
+      "Score competencies and send the approved recap before starting the engine for the next drive.",
   },
 ] as const;
 
@@ -88,14 +101,21 @@ export default function HomePage() {
   return (
     <main>
       <MarketingHero />
+      <BandedDivider />
       <ProofStrip items={proof} />
+      <BandedDivider />
       <FeatureGrid
-        eyebrow="The details generic calendars miss"
-        title="Your working week, connected from start to finish."
-        description="Three focused tools replace the tabs, messages and mental notes that usually follow an instructor through the day."
+        eyebrow="Engineered for dual-control cockpits"
+        title="Your teaching day, connected from first pickup to final recap."
+        description="Replace messy WhatsApp voice notes, paper diaries, and double-booking anxieties with one calm cockpit."
         items={features}
       />
       <Workflow items={workflow} />
+      <BandedDivider />
+      <SocialProof />
+      <div id="faq">
+        <InstructorFaq />
+      </div>
       <MarketingCallout />
     </main>
   );

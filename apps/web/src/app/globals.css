@@ -19,13 +19,13 @@ body {
 }
 
 ::selection {
-  background: color-mix(in oklab, var(--sd-accent) 28%, transparent);
+  background: color-mix(in oklab, var(--sd-brand) 28%, transparent);
 }
 
 .marketing-grid {
   background-image: radial-gradient(
     circle,
-    color-mix(in oklab, var(--sd-accent) 16%, transparent) 1px,
+    color-mix(in oklab, var(--sd-brand) 10%, transparent) 1px,
     transparent 1px
   );
   background-size: var(--sd-space-6) var(--sd-space-6);
@@ -34,21 +34,32 @@ body {
 .marketing-hero-glow {
   background:
     radial-gradient(
-      circle at 50% 18%,
-      color-mix(in oklab, var(--sd-accent) 20%, transparent),
-      transparent 38%
+      circle at 50% 12%,
+      color-mix(in oklab, var(--sd-brand) 14%, transparent),
+      transparent 48%
     ),
     linear-gradient(
       to bottom,
-      color-mix(in oklab, var(--sd-bg) 8%, transparent),
-      var(--sd-bg) 82%
+      color-mix(in oklab, var(--sd-bg) 0%, transparent),
+      var(--sd-bg) 85%
     );
 }
 
 .marketing-cta-glow {
   background: radial-gradient(
     circle at 50% 100%,
-    color-mix(in oklab, var(--sd-brand) 26%, transparent),
+    color-mix(in oklab, var(--sd-brand) 22%, transparent),
     transparent 56%
   );
+}
+
+.marketing-gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--sd-fg) 0%,
+    var(--sd-fg) 55%,
+    var(--sd-brand) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
